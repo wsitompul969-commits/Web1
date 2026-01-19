@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation</title>
+</head>
+<body>
+  <h1 id="judul">cerita donngeng</h1>
+  <p class="paragraf">pada zaman dahulu.</p>
+
+  <button onclick="ubahTeks()">Ubah Teks</button>
+  <br><br>
+
+  <button onclick="ubahJudul()">Ubah Judul</button>
+  <button onclick="ubahWarna()">Ubah Warna</button>
+  <button onclick="ubahParagraf()">Ubah Paragraf</button>
+
+  <script>
+    // Tombol "Ubah Teks"
+    function ubahTeks() {
+      let p = document.querySelector(".paragraf");
+      p.innerHTML = "waktu saya blom punya pacar, saya masih burik";
+    }
+
+    // Tombol "Ubah Judul"
+    function ubahJudul() {
+      let j = document.getElementById("judul");
+      j.innerHTML = "setelah pacaran!";
+    }
+
+    // Tombol "Ubah Warna"
+    function ubahWarna() {
+      let j = document.getElementById("judul");
+      j.style.color = "red";
+    }
+
+    // Tombol "Ubah Paragraf"
+    function ubahParagraf() {
+      let p = document.querySelector(".paragraf");
+      p.innerHTML = "setelah pacaran saya tetap burik :)";
+    }
+  </script>
+</body>
+</html>

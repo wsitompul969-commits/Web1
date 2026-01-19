@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validasi Form</title>
+</head>
+<body>
+  <h2>Form Registrasi</h2>
+  <form onsubmit="return validasi()">
+    <label>Nama:</label><br>
+    <input type="text" id="nama"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password"><br><br>
+
+    <button type="submit">Daftar</button>
+  </form>
+
+  <p id="error" style="color:red;"></p>
+
+  <script>
+    function validasi() {
+      let nama = document.getElementById("nama").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let errorMsg = "";
+
+      if (nama === "") {
+        errorMsg += "Nama wajib diisi.<br>";
+      }
+      if (email.indexOf("@") === -1) {
+        errorMsg += "Email tidak valid.<br>";
+      }
+      if (password.length < 6) {
+        errorMsg += "Password minimal 6 karakter.<br>";
+      }
+
+      if (errorMsg !== "") {
+        document.getElementById("error").innerHTML = errorMsg;
+        return false; // cegah form terkirim
+      }
+
+      alert("Form berhasil dikirim!");
+      return true;
+    }
+  </script>
+</body>
+</html>

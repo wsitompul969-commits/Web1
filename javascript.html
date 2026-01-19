@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Dasar</title>
+</head>
+<body>
+  <h1 id="judul">Belajar JavaScript</h1>
+  <p id="output"></p>
+
+  <button onclick="tampilkanData()">Tampilkan Data</button>
+
+  <script>
+    // Variabel
+    let nama = "Wendy Sitompul";
+    let nim = 23040035;
+    var prodi = "informatika"
+
+    // Fungsi
+    function tampilkanData() {
+      document.getElementById("output").innerHTML =
+        "Nama: " + nama + "<br>nim: " + nim + "<br>prodi: " + prodi;
+    }
+    
+  </script>
+  <hr>
+
+  <h1 id="judul2">Luas Persegi Panjang</h1>
+   <p id="output2"></p>
+
+  <button onclick="tampilkanData2()">Tampilkan Data</button>
+   <script>
+    // Variabel
+    let panjang = 10;
+    let lebar = 15;
+
+    // Fungsi
+    function tampilkanData2() {
+        let luas = panjang * lebar;
+      document.getElementById("output2").innerHTML =
+        "panjang: " + panjang + "<br>lebar: " + lebar + "<br>luas: " + luas;
+        console.log(luas);
+    }
+  </script>
+  <hr>
+
+  <h1 id="judul3">Hobi</h1>
+   <p id="output3"></p>
+
+  <button onclick="tampilkanData3()">Tampilkan Data</button>
+   <script>
+    // Variabel
+    let hobi = ["futsal", "renang", "golf"];
+
+    // Fungsi
+    function tampilkanData3() {
+        let luas = panjang * lebar;
+      document.getElementById("output3").innerHTML =
+        "hobi: " + hobi;
+        console.log(hobi);
+    }
+  </script>
+</body>
+</html>

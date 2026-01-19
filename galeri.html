@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Foto Real_Madrid_CF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+    }
+
+    header {
+      text-align: center;
+      background: #3498db;
+      color: white;
+      padding: 20px 0;
+      animation: kedip 2s infinite alternate;
+    }
+
+    /* Animasi sederhana: teks header berkedip */
+    @keyframes kedip {
+      from { opacity: 1; }
+      to { opacity: 0.6; }
+    }
+
+    .galeri {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .galeri img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .galeri img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #3498db;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Galeri Foto Real_Madrid_CF</h1>
+  </header>
+
+  <section class="galeri">
+    <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/56/Real_Madrid_CF.svg/893px-Real_Madrid_CF.svg.png" alt="Foto 1">
+    <img src="https://i.pinimg.com/736x/a2/aa/83/a2aa83f541227e9ce7e16091f42468ce.jpg" alt="Foto 2">
+    <img src="https://cdn-thegame.imago-images.com/wp-content/uploads/imago1045901715h-860x1149.jpg" alt="Foto 3">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/FC_RB_Salzburg_versus_Real_Madrid_%28Testspiel%2C_7._August_2019%29_09.jpg/250px-FC_RB_Salzburg_versus_Real_Madrid_%28Testspiel%2C_7._August_2019%29_09.jpg" alt="Foto 4">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Karim_Benzema_vs._FC_Schalke_04_%2816647992937%29.jpg/250px-Karim_Benzema_vs._FC_Schalke_04_%2816647992937%29.jpg" alt="Foto 5">
+    <img src="https://imageio.forbes.com/specials-images/dam/imageserve/724109098b3f42a0966841467187c1a3/960x0.jpg?height=1012&width=711&fit=bounds" alt="Foto 6">
+  </section>
+
+  <footer>
+    &copy; 2025 Galeri Wendy
+  </footer>
+
+</body>
+</html>

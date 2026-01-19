@@ -1,0 +1,30 @@
+ body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+    .card {
+      background: lightblue;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.1);
+      background: steelblue;
+      color: white;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    .card:nth-child(2) {
+      animation: blink 2s infinite;
+    }
+
+    

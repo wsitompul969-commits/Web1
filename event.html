@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Form</title>
+</head>
+<body>
+
+    <button onclick="alert('Tombol diklik!')">Klik Saya</button>
+
+    <select onchange="ubahWarna(this.value)">
+        <option value="red">Merah</option>
+        <option value="blue">Biru</option>
+        <option value="green">Hijau</option>
+    </select>
+
+    <p id="teks">Ubah warna saya!</p>
+
+    <script>
+        function ubahWarna(warna) {
+            // Teks tetap hitam
+            document.getElementById("teks").style.color = "black";
+
+            // Mengubah background mengikuti warna pilihan
+            document.body.style.backgroundColor = warna;
+        }
+    </script>
+
+    <p>
+        <form onsubmit="return cekForm()">
+  Nama: <input type="text" id="nama"><br><br>
+  <button type="submit">Kirim</button>
+</form>
+
+<script>
+  function cekForm() {
+    let nama = document.getElementById("nama").value;
+    if (nama === "") {
+      alert("Nama tidak boleh kosong!");
+      return false; // cegah form terkirim
+    }
+    return true; // form terkirim
+  }
+</script>
+    </p>
+
+</body>
+</html>
